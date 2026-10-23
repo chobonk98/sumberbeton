@@ -1,0 +1,113 @@
+/* Dasar */
+:root{--dark:#20252b;--dark-2:#151a1f;--red:#FF0000;--text:#20252b;--muted:#69717a;--light:#f5f6f7;--white:#fff;--container:1160px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:82px}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);line-height:1.65}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.container{width:min(var(--container),calc(100% - 40px));margin-inline:auto}
+/* Navigasi */
+.site-header{position:absolute;z-index:10;top:0;left:0;width:100%;background:rgba(24,29,34,.28);border-bottom:1px solid rgba(255,255,255,.16)}
+.nav-wrap{display:flex;align-items:center;justify-content:space-between;min-height:78px;gap:24px}
+.brand{display:inline-flex;align-items:center;font-size:21px;font-weight:800;letter-spacing:-.7px;white-space:nowrap}
+.brand-main{color:var(--red)}.brand-muted{color:#fff;font-weight:500}.brand-mark{color:var(--red);font-size:28px;margin-left:5px;transform:rotate(-20deg)}
+.nav-menu{display:flex;align-items:center;gap:30px;color:#fff;font-size:14px;font-weight:700}
+.nav-menu a{transition:color .2s}.nav-menu a:hover{color:var(--red)}
+.menu-toggle{display:none;background:none;border:0;color:white;font-size:28px;cursor:pointer}
+/* Hero */
+.hero{position:relative;min-height:720px;display:flex;align-items:center;color:#fff;background:#555 url("images/hero-beton.jpg") center/cover no-repeat}
+.hero-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(13,18,22,.82),rgba(13,18,22,.58) 60%,rgba(13,18,22,.43))}
+.hero-content{position:relative;padding-top:95px;padding-bottom:80px;max-width:var(--container)}
+.eyebrow{margin:0 0 16px;color:var(--red);font-size:12px;font-weight:800;letter-spacing:3px}
+.hero h1{max-width:760px;margin:0;font-size:clamp(38px,5.3vw,66px);line-height:1.12;letter-spacing:-1.6px}
+.hero-description{max-width:640px;margin:24px 0;color:#e8e9ea;font-size:18px}
+.hero-points{display:flex;flex-wrap:wrap;gap:12px 24px;margin:24px 0 32px;font-size:14px}
+.hero-points span::first-letter{color:var(--yellow)}
+.button{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:13px 23px;border-radius:4px;font-weight:800;font-size:14px;transition:transform .2s,background .2s}
+.button:hover{transform:translateY(-2px)}
+.button-primary{background:var(--red);color:#202020}.button-primary:hover{background:#ffe65b}
+.button-light{background:#fff;color:var(--dark)}
+/* Bagian umum */
+.section{padding:94px 0}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:64px}
+.eyebrow-dark{color:#a18b00}
+h2{font-size:clamp(30px,3.5vw,44px);line-height:1.18;letter-spacing:-1px;margin:0 0 22px}
+.section-lead{font-size:17px;color:var(--muted);line-height:1.85}
+.feature{display:flex;gap:17px;margin-top:25px}
+.feature-icon{display:grid;place-items:center;flex:0 0 48px;height:48px;border:1px solid #e3d56c;color:#827100;font-weight:800}
+.feature h3{font-size:17px;margin:0 0 5px}.feature p{margin:0;color:var(--muted);font-size:14px}
+.text-link{display:inline-block;margin-top:28px;font-weight:800}.text-link span{color:#a18b00;margin-left:8px}
+.about-photo-wrap{position:relative;padding:0 0 32px 32px}
+.about-photo-wrap::before{content:"";position:absolute;left:0;bottom:0;width:65%;height:70%;background:#f1e9bd;z-index:-1}
+.about-photo{width:100%;height:440px;object-fit:cover}
+.about-photo-wrap video {
+  width: 100%;             /* Atau sesuaikan dengan ukuran lebar yang sudah ada */
+  height: 250px;           /* Samakan tinggi video dengan tinggi foto lainnya */
+  object-fit: cover;       /* Memastikan video terpotong rapi tanpa merusak rasio (tidak gepeng) */
+  border-radius: 8px;      /* Jika foto Anda menggunakan sudut melengkung */
+  display: block;
+}
+.photo-caption{position:absolute;right:0;bottom:0;background:var(--dark);color:#fff;padding:19px 23px;display:flex;flex-direction:column;max-width:310px}
+.photo-caption span{font-size:12px;color:#c9cdd0;margin-top:3px}
+/* Katalog */
+.services-section{background:var(--light)}
+.section-heading{text-align:center;max-width:680px;margin:0 auto 45px}
+.section-heading h2{margin-bottom:15px}.section-heading>p:last-child{color:var(--muted);margin:0}
+.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.service-card{background:#fff;border:1px solid #e8e9eb;padding:30px 26px;min-height:245px;transition:transform .2s,box-shadow .2s}
+.service-card:hover{transform:translateY(-4px);box-shadow:0 14px 35px rgba(20,25,30,.08)}
+.service-number{font-size:13px;font-weight:800;color:#a18b00;letter-spacing:2px}
+.service-card h3{font-size:20px;line-height:1.3;margin:16px 0 10px}
+.service-card p{font-size:14px;color:var(--muted);margin:0 0 20px}
+.service-card a{font-size:13px;font-weight:800;color:#766500}
+/* Banner */
+.project-banner{background:var(--dark);color:#fff;padding:54px 0}
+.banner-content{display:flex;justify-content:space-between;align-items:center;gap:30px}
+.banner-content h2{font-size:clamp(25px,3vw,36px);max-width:680px;margin:0}
+/* Kontak */
+.contact-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:70px;align-items:center}
+.contact-details{margin-top:28px;display:grid;gap:17px}
+.contact-details p{margin:0;display:flex;flex-direction:column;border-bottom:1px solid #e8e9eb;padding-bottom:14px}
+.contact-details span{font-size:12px;text-transform:uppercase;letter-spacing:1px;color:var(--muted)}
+.contact-details strong{font-size:15px;margin-top:3px}
+.contact-card{padding:35px;background:var(--light);border-top:4px solid var(--yellow)}
+.contact-card h3{font-size:24px;margin:0 0 10px}.contact-card p{color:var(--muted);font-size:15px}
+.button-full{width:100%;margin:12px 0}
+.contact-card small{display:block;color:#777;font-size:12px;line-height:1.6}
+/* Footer dan tombol WA */
+.site-footer{background:var(--dark-2);color:#d9dcdf;padding:24px 0}
+.footer-wrap{display:flex;justify-content:space-between;align-items:center;gap:20px}
+.footer-wrap p{font-size:12px;margin:0;color:#aeb4b9}.brand-footer{font-size:18px}
+.floating-wa{position:fixed;z-index:20;right:22px;bottom:22px;width:58px;height:58px;border-radius:50%;background:#22b85b;color:#fff;display:grid;place-items:center;font-size:35px;box-shadow:0 5px 18px #0003}
+@media(max-width:800px){
+ .nav-wrap{min-height:70px}.menu-toggle{display:block}
+ .nav-menu{display:none;position:absolute;top:70px;left:0;right:0;background:#20252b;padding:15px 22px 22px;flex-direction:column;align-items:stretch;gap:0}
+ .nav-menu.open{display:flex}.nav-menu a{padding:12px 0;border-bottom:1px solid #ffffff1c}
+ .hero{min-height:720px;background-position:58% center}.hero-content{padding-top:110px;padding-bottom:65px}
+ .hero h1{font-size:clamp(37px,8vw,55px)}.hero-description{font-size:16px}
+ .hero-points{flex-direction:column;gap:8px}
+ .section{padding:68px 0}.about-grid,.contact-grid{grid-template-columns:1fr;gap:38px}
+ .about-photo-wrap{margin-top:5px}.about-photo{height:340px}
+ .service-grid{grid-template-columns:repeat(2,1fr)}
+ .banner-content{align-items:flex-start;flex-direction:column}
+ .contact-grid{gap:28px}
+}
+@media(max-width:520px){
+ .container{width:calc(100% - 34px)}
+ .brand{font-size:19px}
+ .hero{min-height:760px}.hero-content{padding-top:105px}
+ .hero h1{font-size:39px;letter-spacing:-1px}
+ .hero-description{font-size:15px}
+ .button{width:100%;text-align:center}
+ .section{padding:56px 0}
+ h2{font-size:31px}
+ .about-photo-wrap{padding-left:16px;padding-bottom:25px}
+ .about-photo{height:280px}
+ .photo-caption{max-width:260px;padding:13px 15px}
+ .service-grid{grid-template-columns:1fr;gap:14px}
+ .service-card{min-height:0;padding:25px 22px}
+ .project-banner{padding:42px 0}
+ .contact-card{padding:25px 21px}
+ .footer-wrap{align-items:flex-start;flex-direction:column}
+ .floating-wa{right:15px;bottom:15px;width:54px;height:54px}
+}
